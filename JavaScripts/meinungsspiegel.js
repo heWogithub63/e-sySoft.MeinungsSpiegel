@@ -276,23 +276,24 @@ async function httpGet(url) {
 }
 
 async function httpPost(url, data) {
-    var url = url;
-    var method = "POST";
-    var postData = data;
+    event.preventDefault();
+    var result;
+	  await fetch(url, {
+	    method: "POST",
+	    headers: {
+	      "Content-Type": "application/json"
+	    },
+            body: JSON.stringify(data)
+	    })
+	    .then(res => {
+		    if (res.status>=200 && res.status <300) {
+		      return res.json()
+		    }else{
+		      throw new Error();
+		    }
+	    })
+	    .then(data=> {result = data},
+		         )
+	    .catch(err=>console.log('fetch() failed'));
 
-    var shouldBeAsync = true;
-    var request = new XMLHttpRequest();
-    
-    request.onload = function () {
-
-   var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
-   var retData = request.responseText; // Returned data, e.g., an HTML document.
-   console.log(retData);
-   }
-
-   request.open(method, url, shouldBeAsync);
-   request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-   
-   request.send(JSON.stringify(postData));
-    
 }
