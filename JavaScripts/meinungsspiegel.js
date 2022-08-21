@@ -213,7 +213,7 @@ function createInstructionLine() {
         var cellText2 = document.createTextNode(" ) erstellen wir eine Übersichtsgrafik und mailen Ihnen das Ergebnis, auf Wunsch, zu !");
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
-            cell.appendChild(createEditField ('width:55px; border:0px', 'teilnehmer', httpGet('http://localhost:3000/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:55px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
@@ -249,7 +249,7 @@ function getFingerPrint() {
          contacts = [visitorId];
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
-      httpPost('http://localhost:3000/MeinungsSpiegel',arrChoosed);
+      httpPost('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel',arrChoosed);
     })
     
 }
