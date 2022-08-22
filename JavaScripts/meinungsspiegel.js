@@ -237,7 +237,7 @@ function createImg(path,height,width) {
   return oImg;
 }
 
-function getFingerPrint() {
+async function getFingerPrint() {
 
     fpPromise
     .then(fp => fp.get())
@@ -245,8 +245,7 @@ function getFingerPrint() {
       // This is the visitor identifier:
       const visitorId = result.visitorId
 
-      if(checkbox.checked)
-         contacts = [visitorId];
+      contacts = [visitorId];
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
       httpPost('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel',arrChoosed);
