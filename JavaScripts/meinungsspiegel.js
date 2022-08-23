@@ -158,7 +158,7 @@ function createCheckBox() {
         row.appendChild(cell);
 
         var cell = document.createElement("td1");
-            cell.appendChild(createImg('./Animation/empty.png', 40, 40));
+            cell.appendChild(createImg('./Animation/empty.png', 40, 120));
 
         row.appendChild(cell);
         tabl.appendChild(row);
