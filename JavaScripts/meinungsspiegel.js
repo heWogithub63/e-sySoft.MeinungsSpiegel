@@ -161,6 +161,7 @@ function createCheckBox() {
             cell.appendChild(createImg('./Animation/empty.png', 40, 120));
 
         row.appendChild(cell);
+
         tabl.appendChild(row);
    
     var form3 = document.getElementById('form3');
@@ -200,7 +201,6 @@ function createButton() {
                 
                  oImg.setAttribute('src', './Animation/timer.gif');
                  var visId = getFingerPrint();
-                 saveBtn.style.backgroundColor = 'blue';
             } 
         })
     return saveBtn;
@@ -208,17 +208,17 @@ function createButton() {
 
 function createInstructionLine() {
         var row = document.createElement("tr");
+       
         var cell = document.createElement("td2");
-        var cellText1 = document.createTextNode("Ab einer Teilnahmezahl > 1000 (derzeit: ");
+        var cellText1 = document.createTextNode("Ab einer Teilnehmerzahl > 1000 (derzeit: ");
         var cellText2 = document.createTextNode(" ) erstellen wir eine Übersichtsgrafik und mailen Ihnen das Ergebnis, auf Wunsch, zu !");
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
-            cell.appendChild(createEditField ('width:55px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
-        
-
+       
         tabl.appendChild(row);
 
     var form2 = document.getElementById('form2');
@@ -249,6 +249,7 @@ async function getFingerPrint() {
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
       httpPost('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel',arrChoosed);
+      saveBtn.style.backgroundColor = 'blue';
     })
     
 }
