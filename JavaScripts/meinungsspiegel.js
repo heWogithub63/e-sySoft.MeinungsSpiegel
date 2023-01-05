@@ -9,11 +9,11 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Das derzeitige politische Handeln halte Ich den aktuellen Geschenissen entsprechend für angepasst !, " +
-               "Ich fühle mich durch die öffentlich rechtlichen Medien aureichend objektiv und unabhängig informiert !, " +
-               "Politisch vorgegebenen Einschränkungen meiner persönlichen Lebensumstände halte ich für grechtfertigt !, " +
-               "Das politische Problemlösungsverhalten durch den Einsatz von finanziellem Allgemeingut halte ich für notwendig !, " +
-               "Meine politisch Einstellung ist durch das Handeln der Ampel-Koalition weitgehend representiert !";
+   var file =  "Was halten Sie von der aktuellen Gesundheitspolitik ?, " +
+               "Wie stufen Sie die bisherige Corona-Politik ein ?, " +
+               "Sind Sie für eine Impfpflicht ?, " +
+               "Halten Sie die mRNA Impfstoffe für wirksam ?, " +
+               "Sind Sie für die Neuesten Entscheidungen des Gesundheitsmenisters ?";
    var themaSplit = file.split(", ");
    var header = "Umfrage Themen, "+
                 "Ich stimme zu, " +
@@ -214,7 +214,7 @@ function createInstructionLine() {
         var cellText2 = document.createTextNode(" ) erstellen wir eine Übersichtsgrafik und mailen Ihnen das Ergebnis, auf Wunsch, zu !");
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
-            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.onrender.com/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
@@ -248,7 +248,7 @@ async function getFingerPrint() {
       contacts = [visitorId];
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
-      httpPost('https://meinungsspiegel.herokuapp.com/MeinungsSpiegel',arrChoosed);
+      httpPost('https://meinungsspiegel.onrender.com/MeinungsSpiegel',arrChoosed);
       saveBtn.style.backgroundColor = 'blue';
     })
     
