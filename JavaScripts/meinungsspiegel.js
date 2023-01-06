@@ -9,11 +9,11 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Was halten Sie von der aktuellen Gesundheitspolitik ?, " +
-               "Wie stufen Sie die bisherige Corona-Politik ein ?, " +
-               "Sind Sie für eine Impfpflicht ?, " +
-               "Halten Sie die mRNA Impfstoffe für wirksam ?, " +
-               "Sind Sie für die Neuesten Entscheidungen des Gesundheitsmenisters ?";
+   var file =  "Führen Sie aktuelle Wirtschaftslage auf die Corona Politik zurück ?, " +
+               "Führen Sie aktuelle Wirtschaftslage auf den Ukraine Krieg zurück ?, " +
+               "Halten Sie eine Erhohlung der Wirtschaftslage in diesem Jahr für möglich ?, " +
+               "Halten Sie den Lösungsansatz 'Problemlösung mittels Einsatz öffentlicher Gelder' für richtig ?, " +
+               "Unterstützen Sie die aktuellen Entscheidungen der Regierung in Bezug auf 'Neuer Richtungswechsel' ?";
    var themaSplit = file.split(", ");
    var header = "Umfrage Themen, "+
                 "Ich stimme zu, " +
