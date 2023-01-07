@@ -11,9 +11,9 @@
    var gender = gen.split(", ");
    var file =  "Führen Sie die aktuelle Wirtschaftslage auf die Corona Politik zurück ?, " +
                "Führen Sie die aktuelle Wirtschaftslage auf den Ukraine Krieg zurück ?, " +
-               "Halten Sie eine Erhohlung der Wirtschaftslage in diesem Jahr für möglich ?, " +
+               "Denken Sie die aktuelle Wirtschaftslage ist politisch gemacht ?, " +
                "Halten Sie den Lösungsansatz 'Problemlösung mittels Einsatz öffentlicher Gelder' für richtig ?, " +
-               "Unterstützen Sie die aktuellen Entscheidungen der Regierung in Bezug auf 'Beginn einer neuen Zeit' ?";
+               "Unterstützen Sie die Entscheidungen der Regierung 'Zugunsten des Beginns einer neuen Zeit' ?";
    var themaSplit = file.split(", ");
    var header = "Umfrage Themen, "+
                 "Ich stimme zu, " +
