@@ -9,11 +9,11 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Führen Sie die aktuelle Wirtschaftslage auf die Corona Politik zurück ?, " +
-               "Führen Sie die aktuelle Wirtschaftslage auf den Ukraine Krieg zurück ?, " +
-               "Denken Sie die aktuelle Wirtschaftslage ist politisch gemacht ?, " +
-               "Halten Sie den Lösungsansatz 'Problemlösung mittels Einsatz öffentlicher Gelder' für richtig ?, " +
-               "Unterstützen Sie die Entscheidungen der Regierung 'Zugunsten des Beginns einer neuen Zeit' ?";
+   var file =  "Die Politik in Deutschland muß revormiert werden, " +
+               "Die bereits ablaufende Wirtschaftsflucht muß gestoppt werden, " +
+               "Ein Refferendum soll einen Machtwechsel durch Neuwahlen einleiten, " +
+               "Neutralität sowie politische Unabhängigkeit der Legislative muß gewährleistet sein, " +
+               "Machtbefugnisse der Regierung müssen auf ein Minimum reduziert werden";
    var themaSplit = file.split(", ");
    var header = "Umfrage Themen, "+
                 "Ich stimme zu, " +
