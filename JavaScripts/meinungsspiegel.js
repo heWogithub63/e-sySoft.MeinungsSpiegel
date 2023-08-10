@@ -9,9 +9,9 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Die Politik in Deutschland muß revormiert werden, " +
-               "Die bereits ablaufende Wirtschaftsflucht muß gestoppt werden, " +
-               "Ein Refferendum soll einen Machtwechsel durch Neuwahlen einleiten, " +
+   var file =  "Die Politik in Deutschland muß reformiert werden, " +
+               "Eine bereits ablaufende Wirtschaftsflucht muß gestoppt werden, " +
+               "Ein Referendum soll einen Machtwechsel durch Neuwahlen ermöglichen, " +
                "Neutralität sowie politische Unabhängigkeit der Legislative muß gewährleistet sein, " +
                "Machtbefugnisse der Regierung müssen auf ein Minimum reduziert werden";
    var themaSplit = file.split(", ");
