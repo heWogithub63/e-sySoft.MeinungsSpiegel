@@ -9,11 +9,10 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Die Politik in Deutschland muß reformiert werden, " +
-               "Eine bereits ablaufende Wirtschaftsflucht muß gestoppt werden, " +
-               "Ein Referendum soll einen Machtwechsel durch Neuwahlen ermöglichen, " +
-               "Neutralität sowie politische Unabhängigkeit der Legislative muß gewährleistet sein, " +
-               "Machtbefugnisse der Regierung müssen auf ein Minimum reduziert werden";
+   var file =  "Der praktiezierte Genuizid an der palastinensischen Bevölkerung ist ein unglaubliches bisher nie dagewesenes Verbrechen gegen Humanität und Internationales Recht, " +
+               "Alle die Diesen am Laufen halten oder sich bedingungslos hinter die Drahtzieher stellen müssen zur Rechenschaft gezogen werden !!, " +
+               "Eine mehrheitlich verabschiedete Resulution der UN wird mit den Füssen getreten so das man sich fragen muß was ist Recht noch wert in unserer Gesellschaft ";
+               
    var themaSplit = file.split(", ");
    var header = "Umfrage Themen, "+
                 "Ich stimme zu, " +
@@ -297,3 +296,4 @@ async function httpPost(url, data) {
 	    .catch(err=>console.log('fetch() failed'));
 
 }
+
