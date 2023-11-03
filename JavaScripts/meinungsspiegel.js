@@ -9,7 +9,7 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Der praktiezierte Genuizid an der palastinensischen Bevölkerung ist ein unglaubliches bisher nie dagewesenes Verbrechen gegen Humanität und Internationales Recht, " +
+   var file =  "Der praktiezierte Genuizid an der palästinensischen Bevölkerung ist ein unglaubliches bisher nie dagewesenes Verbrechen gegen Humanität und Internationales Recht, " +
                "Alle die Diesen am Laufen halten oder sich bedingungslos hinter die Drahtzieher stellen müssen zur Rechenschaft gezogen werden !!, " +
                "Eine mehrheitlich verabschiedete Resulution der UN wird mit den Füssen getreten so das man sich fragen muß was ist Recht noch wert in unserer Gesellschaft ";
                
