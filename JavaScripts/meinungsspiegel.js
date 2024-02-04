@@ -1,4 +1,4 @@
-or//create the request form html
+//create the request form html
    const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
     .then(FingerprintJS => FingerprintJS.load())
    var contacts = [];
