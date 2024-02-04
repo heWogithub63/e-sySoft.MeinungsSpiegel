@@ -1,4 +1,4 @@
-//create the request form html
+or//create the request form html
    const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
     .then(FingerprintJS => FingerprintJS.load())
    var contacts = [];
@@ -213,7 +213,7 @@ function createInstructionLine() {
         var cellText2 = document.createTextNode(" ) erstellen wir eine Übersichtsgrafik und mailen Ihnen das Ergebnis, auf Wunsch, zu !");
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
-            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://meinungsspiegel.onrender.com/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://dbconnector.onrender.com/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
@@ -247,7 +247,7 @@ async function getFingerPrint() {
       contacts = [visitorId];
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
-      httpPost('https://meinungsspiegel.onrender.com/MeinungsSpiegel',arrChoosed);
+      httpPost('https://dbconnector.onrender.com/MeinungsSpiegel',arrChoosed);
       saveBtn.style.backgroundColor = 'blue';
     })
     
