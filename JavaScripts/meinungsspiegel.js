@@ -1,5 +1,5 @@
 or//create the request form html
-   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
+   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
     .then(FingerprintJS => FingerprintJS.load())
    var contacts = [];
    var tbl = document.createElement("table");
@@ -43,7 +43,7 @@ or//create the request form html
 function MeinungsSpiegel() {
   
    var row = document.createElement("tr");
-   for(var r = 0; r<gender.length; r++) {
+   for(var r = 0; r < gender.length; r++) {
       var cell = document.createElement("td1");
       var cell0 = document.createElement("td1");
       var cell1 = document.createElement("td1");
@@ -106,7 +106,7 @@ function createRadioElement(elem, value, name, checked) {
 
             var complete = true;
 
-            for(var x=2; x<arrChoosed.length; x++) {
+            for(var x=2; x < arrChoosed.length; x++) {
               if(arrChoosed[x][1] == "null") {
                   complete = false;
                }
