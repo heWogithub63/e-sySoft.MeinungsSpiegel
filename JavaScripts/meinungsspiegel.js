@@ -1,6 +1,6 @@
 //create the request form html
-   /*const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
-    .then(FingerprintJS => FingerprintJS.load())*/
+   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
+    .then(FingerprintJS => FingerprintJS.load())
    var contacts = [];
    var tbl = document.createElement("table");
    var tab0 = document.createElement("table0")
@@ -240,14 +240,14 @@ function createImg(path,height,width) {
 
 async function getFingerPrint() {
     var contacts = "";
-    /*fpPromise
+    fpPromise
     .then(fp => fp.get())
     .then(result => {
       // This is the visitor identifier:
       const visitorId = result.visitorId
     })
     
-      contacts = [visitorId];*/
+      contacts = [visitorId];
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
       httpPost('https://dbconnector.onrender.com/MeinungsSpiegel',arrChoosed);
