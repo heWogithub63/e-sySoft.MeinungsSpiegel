@@ -1,6 +1,6 @@
 //create the request form html
-   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
-    .then(FingerprintJS => FingerprintJS.load())
+   /*const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
+    .then(FingerprintJS => FingerprintJS.load())*/
    var contacts = [];
    var tbl = document.createElement("table");
    var tab0 = document.createElement("table0")
@@ -9,7 +9,7 @@
    var max = 49;
    var gen = "weiblich, männlich";
    var gender = gen.split(", ");
-   var file =  "Der praktiezierte Genuizid an der palästinensischen Bevölkerung ist ein unglaubliches bisher nie dagewesenes Verbrechen gegen Humanität und Internationales Recht, " +
+   var file =  "Der praktiezierte Genuizid an der palastinensischen Bevölkerung ist ein unglaubliches bisher nie dagewesenes Verbrechen gegen Humanität und Internationales Recht, " +
                "Alle die Diesen am Laufen halten oder sich bedingungslos hinter die Drahtzieher stellen müssen zur Rechenschaft gezogen werden !!, " +
                "Eine mehrheitlich verabschiedete Resulution der UN wird mit den Füssen getreten so das man sich fragen muß was ist Recht noch wert in unserer Gesellschaft ";
                
@@ -43,7 +43,7 @@
 function MeinungsSpiegel() {
   
    var row = document.createElement("tr");
-   for(var r = 0; r < gender.length; r++) {
+   for(var r = 0; r<gender.length; r++) {
       var cell = document.createElement("td1");
       var cell0 = document.createElement("td1");
       var cell1 = document.createElement("td1");
@@ -106,7 +106,7 @@ function createRadioElement(elem, value, name, checked) {
 
             var complete = true;
 
-            for(var x=2; x < arrChoosed.length; x++) {
+            for(var x=2; x<arrChoosed.length; x++) {
               if(arrChoosed[x][1] == "null") {
                   complete = false;
                }
@@ -213,7 +213,9 @@ function createInstructionLine() {
         var cellText2 = document.createTextNode(" ) erstellen wir eine Übersichtsgrafik und mailen Ihnen das Ergebnis, auf Wunsch, zu !");
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
-            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://dbconnector.onrender.com/MeinungsSpiegel'), 0));
+            
+            //cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://dbconnector.onrender.com/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('http://localhost:3030/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
@@ -237,19 +239,20 @@ function createImg(path,height,width) {
 }
 
 async function getFingerPrint() {
-
-    fpPromise
+    var contacts = "";
+    /*fpPromise
     .then(fp => fp.get())
     .then(result => {
       // This is the visitor identifier:
       const visitorId = result.visitorId
-
-      contacts = [visitorId];
+    })
+    
+      contacts = [visitorId];*/
       arrChoosed[0][1] = contacts;
       arrChoosed[1][1] = textEditor[1].value;
       httpPost('https://dbconnector.onrender.com/MeinungsSpiegel',arrChoosed);
+      //httpPost('http://localhost:3030/MeinungsSpiegel',arrChoosed);
       saveBtn.style.backgroundColor = 'blue';
-    })
     
 }
 
@@ -296,4 +299,3 @@ async function httpPost(url, data) {
 	    .catch(err=>console.log('fetch() failed'));
 
 }
-
