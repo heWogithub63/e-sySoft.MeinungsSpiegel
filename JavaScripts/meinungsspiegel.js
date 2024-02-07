@@ -1,5 +1,5 @@
 //create the request form html
-   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
+   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
     .then(FingerprintJS => FingerprintJS.load())
    var contacts = [];
    var tbl = document.createElement("table");
