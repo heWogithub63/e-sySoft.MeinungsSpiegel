@@ -1,7 +1,5 @@
-//create the request form html
-   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
-    .then(FingerprintJS => FingerprintJS.load())
-   var contacts = [];
+
+
    var tbl = document.createElement("table");
    var tab0 = document.createElement("table0")
    var tabl = document.createElement("table1")
@@ -60,7 +58,7 @@ function MeinungsSpiegel() {
    var form1 = document.getElementById('form1');
    form1.appendChild(tab0); // appends <table> into <form1>
    
-   for (var r = 0; r < (themaSplit.length +1); r++) {
+   for (var r = 0; r < themaSplit.length +1; r++) {
         var row = document.createElement("tr");
 	     
 	// create cells in row
@@ -214,8 +212,8 @@ function createInstructionLine() {
             row.appendChild(cellText1);
         var cell = document.createElement("td2");
             
-            //cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://dbconnector.onrender.com/MeinungsSpiegel'), 0));
-            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('http://localhost:3030/MeinungsSpiegel'), 0));
+            cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('https://dbconnector.onrender.com/MeinungsSpiegel'), 0));
+            //cell.appendChild(createEditField ('width:60px; border:0px', 'teilnehmer', httpGet('http://localhost:3030/MeinungsSpiegel'), 0));
             row.appendChild(cell);
         var cell = document.createElement("td2");
             row.appendChild(cellText2);
@@ -239,20 +237,11 @@ function createImg(path,height,width) {
 }
 
 async function getFingerPrint() {
-    var contacts = "";
-    fpPromise
-    .then(fp => fp.get())
-    .then(result => {
-      // This is the visitor identifier:
-      const visitorId = result.visitorId
-    })
-    
-      contacts = [visitorId];
-      arrChoosed[0][1] = contacts;
+
+      arrChoosed[0][1] ="";
       arrChoosed[1][1] = textEditor[1].value;
       httpPost('https://dbconnector.onrender.com/MeinungsSpiegel',arrChoosed);
       //httpPost('http://localhost:3030/MeinungsSpiegel',arrChoosed);
-      saveBtn.style.backgroundColor = 'blue';
     
 }
 
@@ -297,5 +286,7 @@ async function httpPost(url, data) {
 	    .then(data=> {result = data},
 		         )
 	    .catch(err=>console.log('fetch() failed'));
+
+
 
 }
